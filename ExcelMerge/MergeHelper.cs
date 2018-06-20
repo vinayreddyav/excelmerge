@@ -13,10 +13,13 @@ namespace ExcelMerge
         public void MergeExcel(string file1, string file2)
         {
             
-            string connectionStringFile1 = string.Format("Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties=Excel 12.0;", file1);
-            string connectionStringFile2 = string.Format("Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties=Excel 12.0;", file2);
+            string connectionStringFile1 = string.Format("Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties=Excel 8.0;", file1);
+            string connectionStringFile2 = string.Format("Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties=Excel 8.0;", file2);
 
             DataSet data = new DataSet();
+
+            
+
 
             using (OleDbConnection con = new OleDbConnection(connectionStringFile1))
             {

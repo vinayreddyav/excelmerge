@@ -57,8 +57,12 @@ namespace ExcelMerge
                 MessageBox.Show("Please Select valid File 2 path of Excel document!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            new MergeHelperOpenXML().MergeExcel(txtFile1.Text, txtFile2.Text);
             
-            new MergeHelper().MergeExcel(txtFile1.Text, txtFile2.Text);
+            //new MergeHelper().MergeExcel(txtFile1.Text, txtFile2.Text);
+
+
 
             MessageBox.Show("Excel Merge successfully,Please check in the excel file");
         }
